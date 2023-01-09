@@ -38,7 +38,7 @@ using System.Collections;
              transform.eulerAngles += new Vector3 (0,turner,0);
          }
          if(looker != 0){
-             //Code for action on mouse moving right
+             
              transform.eulerAngles += new Vector3 (looker,0,0);
          }
          
