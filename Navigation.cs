@@ -6,28 +6,29 @@ using UnityEngine.AI;
 public class Navigation : MonoBehaviour
 {
 
-
+    [Header("Angles")]
     public float radius;
     [Range(0,360)]
     public float angle;
 
+
+    [Header("Target")]
     private NavMeshAgent agent = null;
     public Transform target;
     public Animator anim;
-
     public PlayerMovement Player;
-
     public LayerMask targetMask;
     public LayerMask ObjectMask;
 
-    public bool CanSeePlayer;
 
+    [Header("Stats")]
+    public bool CanSeePlayer;
     public float timeOfLastAttack;
     public bool HasStopped;
-
     public float timer;
-
     public bool Isclose = false;
+
+
 
     private void Start()
     {
@@ -43,6 +44,7 @@ public class Navigation : MonoBehaviour
         }
 
     }
+
     private void OnTriggerExit(Collider other)
     {
         if (other.tag == "player")
