@@ -128,15 +128,6 @@ public class weapon : MonoBehaviour
         }
         else if (AmmoInMag < MaxInMag && AmmoInTotal <= MaxInMag)
         {
-
-            /*            if (AmmoInMag == 0)
-                        {
-                            remove = AmmoInTotal;
-                            AmmoInMag += AmmoInTotal;
-                            AmmoInTotal -= remove;
-                            IsRealoading = false;
-                            Guns.SetBool(RealoadAnimationString, false);
-                        }*/
             remove = MaxInMag - AmmoInMag;
             if (AmmoInTotal == 0)
             {
