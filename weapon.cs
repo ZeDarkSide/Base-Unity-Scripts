@@ -6,19 +6,10 @@ using UnityEngine.UI;
 public class weapon : MonoBehaviour
 {
 
-
+    [Header("Weapon Stats")]
     public float damage;
-
     public float rang;
-
     public float FireRate;
-
-    public Camera CAM;
-
-    public AudioSource shot;
-
-
-
     public int AmmoInMag;
     public int MaxInMag;
     public int AmmoInTotal;
@@ -29,21 +20,23 @@ public class weapon : MonoBehaviour
     public float realoadTime;
     public bool IsRealoading = false;
 
-    //What Gun is it
+    [Header("Weapon Type")]
     public bool SingleFire = false;
     public bool AutoFire = false;
 
+    [Header("Weapon Animation")]
     public string RealoadAnimationString;
     public Animator Guns;
 
-    [Header("Guns stats")]
+
+    [Header("Inputs")]
+    public Camera CAM;
+    public AudioSource shot;
     public Vector3 upRecoil;
     Vector3 orignalRotation;
     public GameObject midRightArm;
     public int GunSloat;
     public GameObject Parent;
-
-
     private float NextTimeToFire;
 
     public GameManager Manager;
