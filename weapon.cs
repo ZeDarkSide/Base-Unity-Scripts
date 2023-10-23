@@ -173,10 +173,10 @@ public class weapon : MonoBehaviour
             shot.Play();
             
             AmmoInMag -= 1;
-            ZombieHealth zombie = hit.transform.GetComponent < ZombieHealth>();
-            if (zombie != null)
+            placeholder placeholder = hit.transform.GetComponent <placeholder>();
+            if (placeholder != null)
             {
-                zombie.TakeDamage(damage);
+                placeholder.TakeDamage(damage);
             }
 
 
@@ -199,9 +199,9 @@ public class weapon : MonoBehaviour
 
     IEnumerator Recoil()
     {
-        Guns.SetBool("block_recoil", true);
+        Guns.SetBool("placeholder", true);
         yield return new WaitForSeconds(.16f);
-        Guns.SetBool("block_recoil", false);
+        Guns.SetBool("placeholder", false);
     }
 
 }
